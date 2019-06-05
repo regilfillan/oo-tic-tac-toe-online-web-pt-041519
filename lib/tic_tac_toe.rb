@@ -8,7 +8,7 @@ class TicTacToe
     [0, 3, 6], [1, 4, 7], [2, 5, 8],
     [0, 4, 8], [2, 4, 6]
   ]
-
+  
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -18,13 +18,13 @@ class TicTacToe
   end
 
   def input_to_index(user_input)
-    user_input.to_i - 1
+    user_input.to_i-1
   end
-
+ 
   def move(index, token)
     @board[index] = token
   end
-
+  
   def position_taken?(index)
     @board[index] != " "
   end
@@ -34,7 +34,7 @@ class TicTacToe
   end
 
   def turn_count
-    @board.count{|square| square != " " }
+   @board.count { |square| square != " "}
   end
 
   def current_player
